@@ -11,7 +11,7 @@ class GroqResponse(BaseModel):
     id: str
     model: str
     choices: List[ChatChoice]
-    usage: Optional[Dict[str, int]] = Field(default_factory=dict)
+    usage: Optional[Dict[str, float]] = Field(default_factory=dict)
 
 class GroqFastClient:
     def __init__(self, api_key: str, base_url: str = "https://api.groq.com/openai/v1"):
